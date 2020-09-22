@@ -15,7 +15,7 @@ class TextGradient extends StatelessWidget {
   Widget build(BuildContext context) {
     return ShaderMask(
       shaderCallback: (Rect bounds) => textGradient
-          .createShader(Rect.fromLTWH(0, 0, bounds.width, bounds.height)),
+          .createShader(bounds),
       child: Text(
         text,
         style: textStyle.copyWith(
